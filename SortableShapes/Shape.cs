@@ -8,14 +8,19 @@ namespace SortableShapes
 {
     public abstract class Shape : IComparable<Shape>
     {
-        public double Area { get; set; }
+        public abstract double GetArea();
 
         public int CompareTo(Shape? otherShape)
         {
-            if (otherShape == null || otherShape.Area > this.Area)
+            if (otherShape == null || otherShape.GetArea() > GetArea())
+            {
                 return -1;
-            if (otherShape.Area < this.Area)
+            }
+            if (otherShape.GetArea() < GetArea())
+            {
                 return 1;
+            }
+
             return 0;
         }
     }

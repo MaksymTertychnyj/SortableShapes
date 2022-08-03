@@ -16,5 +16,5 @@ shapes.Sort();
 
 foreach (var shape in shapes)
 {
-    Console.WriteLine($"type: {shape.GetType().Name}, area: {shape.Area}");
+    Console.WriteLine($"type: {shape.GetType().Name}, area: {shape.GetArea()}");
 }

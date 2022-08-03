@@ -8,9 +8,15 @@ namespace SortableShapes
 {
     public class Square : Shape
     {
+        private double _side;
         public Square(double side)
         {
-            Area = Math.Pow(side, 2);
+            _side = side;
+        }
+
+        public override double GetArea()
+        {
+            return Math.Pow(_side, 2);
         }
     }
 }

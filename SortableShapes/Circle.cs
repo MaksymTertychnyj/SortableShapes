@@ -8,9 +8,16 @@ namespace SortableShapes
 {
     public class Circle : Shape
     {
+        private double _radius;
+
         public Circle(double radius)
         {
-            Area = Math.PI * Math.Pow(radius, 2);
+            _radius = radius;
+        }
+
+        public override double GetArea()
+        {
+            return Math.PI * Math.Pow(_radius, 2);
         }
     }
 }

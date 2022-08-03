@@ -8,9 +8,18 @@ namespace SortableShapes
 {
     public class Triangle : Shape
     {
-        public Triangle(double _base, double _height)
+        private double _base;
+        private double _height;
+
+        public Triangle(double _base, double height)
         {
-            Area = _base * _height / 2;
+            this._base = _base;
+            _height = height;
+        }
+
+        public override double GetArea()
+        {
+            return _base * _height / 2;
         }
     }
 }
